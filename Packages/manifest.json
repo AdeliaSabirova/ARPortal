@@ -1,6 +1,5 @@
 {
-    "dependencies": {
-    "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-10.5.5.tgz",
+  "dependencies": {
     "com.unity.cinemachine": "2.6.11",
     "com.unity.collab-proxy": "1.15.7",
     "com.unity.ide.rider": "2.0.7",
@@ -13,6 +12,8 @@
     "com.unity.timeline": "1.4.8",
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arcore": "4.1.9",
+    "com.unity.xr.arfoundation": "4.1.9",
+    "com.unity.xr.interaction.toolkit": "2.0.1",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

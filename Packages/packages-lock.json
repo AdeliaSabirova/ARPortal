@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.ptc.vuforia.engine": {
-      "version": "file:com.ptc.vuforia.engine-10.5.5.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      }
-    },
     "com.unity.cinemachine": {
       "version": "2.6.11",
       "depth": 0,
@@ -160,6 +152,17 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.arfoundation": {
+      "version": "4.1.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.arsubsystems": "4.1.9",
+        "com.unity.xr.management": "4.0.1",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.xr.arsubsystems": {
       "version": "4.1.9",
       "depth": 1,
@@ -169,9 +172,33 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.core-utils": {
+      "version": "2.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.interaction.toolkit": {
+      "version": "2.0.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.inputsystem": "1.2.0",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.xr.core-utils": "2.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.8",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.physics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.8",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
