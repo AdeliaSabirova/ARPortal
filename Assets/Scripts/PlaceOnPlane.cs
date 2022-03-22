@@ -11,6 +11,7 @@ public class PlaceOnPlane : MonoBehaviour
     private Vector2 _touchPosition;
     public GameObject prefab;
     private static List<ARRaycastHit> _hits = new List<ARRaycastHit>();
+    private bool _onScene = false;
 
     private void Awake()
     {
@@ -20,15 +21,19 @@ public class PlaceOnPlane : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 0)
+        if (!_onScene)
         {
-            _touchPosition = Input.GetTouch(0).position;
-            if(_manager.Raycast(_touchPosition, _hits, TrackableType.PlaneWithinPolygon))
+            if (Input.touchCount > 0)
             {
-                var hitPose = _hits[0].pose;
-                prefab.SetActive(true);
-                prefab.transform.position = hitPose.position;
-                LookAtPlayer(prefab.transform);
+                _touchPosition = Input.GetTouch(0).position;
+                if (_manager.Raycast(_touchPosition, _hits, TrackableType.PlaneWithinPolygon))
+                {
+                    var hitPose = _hits[0].pose;
+                    prefab.SetActive(true);
+                    prefab.transform.position = hitPose.position;
+                    LookAtPlayer(prefab.transform);
+                    _onScene = true;
+                }
             }
         }
     }
