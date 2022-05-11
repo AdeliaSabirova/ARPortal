@@ -9,6 +9,7 @@ public class DoorAnimationController : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         GetComponent<Animator>().SetTrigger("Open");
+        Debug.LogError("Door is open");
 
         var planeManager = FindObjectOfType<ARPlaneManager>();
         var pointCloudManager = FindObjectOfType<ARPointCloudManager>();
@@ -25,5 +26,8 @@ public class DoorAnimationController : MonoBehaviour, IPointerClickHandler
 
         planeManager.enabled = false;
         pointCloudManager.enabled = false;
+        Debug.LogError("Plane manager is disabled");
+        Debug.LogError("Point cloud manager is disabled");
+
     }
 }

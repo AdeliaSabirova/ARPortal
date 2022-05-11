@@ -23,6 +23,7 @@ public class UXController : MonoBehaviour
         foreach(var item in obj.added)
         {
             prefab.SetActive(false);
+            Debug.LogError("UI guides are removed");
             break;
         }
     }
