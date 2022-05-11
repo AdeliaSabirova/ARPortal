@@ -29,6 +29,7 @@ public class PlaceOnPlane : MonoBehaviour
                 prefab.SetActive(true);
                 prefab.transform.position = hitPose.position;
                 LookAtPlayer(prefab.transform);
+                Debug.LogError("Portal is placed");
             }
         }
     }
